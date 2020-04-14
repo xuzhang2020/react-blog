@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## First Single Page Application - ReactJS
 
-In the project directory, you can run:
 
-### `npm start`
+### About making the project
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This project is react single web page application.In the project, I used React, Sass, Node.js and Gulp.<br />
 
-### `npm test`
+React routing technology is used to achieve the page routing of the home page and blog details page.
+	[import {  Route,  NavLink,  HashRouter} from "react-router-dom";]
+	[<HashRouter>]
+		[<Route exact path="/" component={a js file name}/>]
+		[<Route path="/route name" component={another js file name}/>]
+	[</HashRouter>]
+See [Main.js] file for more information about the react routing technology.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Sass technology and scss files is used to manage the css styles of page elements.
+See [Style.scss] file for more information about the react routing technology.
 
-### `npm run build`
+The Google News API, react timer and AJAX technology is used to display Google news headlines in a div. The content of the div updates every 5 seconds.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+	[this.timer = setInterval(function () {
+		axios.get('http://newsapi.org/v2/top-headlines?sources=google-news&apiKey=keyvaluee')
+		.then(function (response) {
+			console.log(response);
+			
+			this.setState({
+				articles: response.data.articles
+			});
+		}.bind(this));
+	}.bind(this), 5000);]
+See [Nav.js] file for more information.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Some steps about building the development environment before programming.
+1. Download Node.js and install it.
+2. Use [npm] command to install 'create-react-app' modeule.
+	[npm install create-react-app]
+3. Use [npm] command to create a React project.
+	[create-react-app react_blog]
+4. Before using React router technology, use [npm] command to install 'react-router-dom' module.
+	[npm install react-router-dom --save]
+5. Before using React AJAX technology, use [npm] command to install 'react-router-dom' module.
+	[npm install axios --save]
+See project files for more information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### About running the project
+1. Download the project files. It's a zip package.
+2. Unzip the zip package. The decompressed file directory name is 'react_blog'.
+3. Download Node.js and install it.
+4. Use system command line tool and execute commands belows in turn:
+	[cd react_blog]
+	[npm install]
+	[npm start]
+5. After [nmp start] executed, you can type [http:localhost:3000] in the Google Chrome navigation bar and press the Enter key.
+   The home page of this project will display.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

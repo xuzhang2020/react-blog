@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import img from "./images/header.jpg";
+import './sass/style.scss';
 
 var sectionStyle = {
   color: '#FFFFFF',
@@ -13,7 +14,7 @@ var sectionStyle = {
 class Footer extends React.Component {
   render() {
     return (
-		<h4>copyright ?</h4>
+		<h4>© 2020 Blog Posts</h4>
     );
   }
 }

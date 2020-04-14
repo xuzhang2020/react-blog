@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import './sass/style.scss';
 
 const contentStyle = {
 	display: 'flex',
