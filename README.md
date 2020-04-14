@@ -72,12 +72,16 @@ See project files for more information.
 
 ### About running the project
 1. Download the project files. It's a zip package.
-2. Unzip the zip package. The decompressed file directory name is 'react_blog'.
+2. Unzip the zip package. The decompressed file directory  name is 'react_blog_master'.
 3. Download Node.js and install it.
 4. Use system command line tool and execute commands belows in turn:
-	cd react_blog
+
+	cd react_blog_master
+	
 	npm install
+	
 	npm start
+	
 5. After nmp start executed, you can type http:localhost:3000 in the Google Chrome navigation bar and press the Enter key.
    The home page of this project will display.
 
