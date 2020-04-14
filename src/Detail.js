@@ -41,8 +41,6 @@ class Detail extends React.Component {
 				<div>
 					  <img src={require('./images/' + this.props.location.state.img)}></img>
 				</div>
-				<p>{this.props.location.state.content}
-				</p>
 				<div >
 					<article className="paragraph">
 						<p>We Are Still In welcomes the Japan Climate Initiative’s call to raise the ambition of the Japan Government’s long-term climate strategy submitted today to UN ahead of the G20.  </p>

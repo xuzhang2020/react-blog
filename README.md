@@ -15,6 +15,18 @@ React routing technology is used to achieve the page routing of the home page an
 	[</HashRouter>]
 See [Main.js] file for more information about the react routing technology.
 
+React props and state is used to pass and receive parameters among pages.
+Pass parameters:
+	[<div className="card-body" style={styles[post.id%3]}>
+	  <Link to={{pathname: '/Detail',state:{title:post.title,img:post.pic,content:post.content}}}><h4>{post.title}</h4></Link>
+	  <h3>{post.postdate}</h3>
+	</div>]
+Receive and use parameters:		  
+	[<h2 className="title">{this.props.location.state.title}</h2>
+	<div>
+		  <img src={require('./images/' + this.props.location.state.img)}></img>
+	</div>]
+
 Sass technology and scss files is used to manage the css styles of page elements.
 See [Style.scss] file for more information about the react routing technology.
 
